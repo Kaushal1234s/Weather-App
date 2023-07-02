@@ -1,0 +1,298 @@
+
+
+/* jitne bhi measurements ya any kind of decoration CSS mein likhe jaate h kisi bhi property ke woh designer ke dwaare diye jaate h */
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+:root{
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #D8E2EF;
+    --colorLight2: #F9F7F7;
+}
+
+
+.wrapper{
+    width: 100vw;
+    height: 230vh;
+    color: var(--colorLight2);
+    background-color: #112D4E;
+    background-image: linear-gradient(156deg,#112d4e 2%,#3f72af 100%);
+}
+
+
+/* .form-container.active{
+    scale: 1;
+    opacity: 1;
+    display: flex;
+}  */
+
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;          /**/
+}
+
+
+.tab-container{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tab{
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px 8px;
+}
+
+
+.tab.current-tab{
+    background-color: rgb(129, 180, 228); 
+    border-radius: 4px;
+}
+
+
+.weather-container{
+    margin-block: 4rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem; */
+}
+
+
+.btn{
+    width: 47px;
+    height: 40px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    /* border-radius: 5px; */
+    background-color:rgb(106, 174, 197);
+    cursor: pointer;
+    /* padding: 10px 30px; */
+}
+
+
+.sub-container{                    /* ye kai kai jagah kaam dega isliye alag se he likh liya verna jis class mein kaam dega usme baar baar likhni padti properties*/
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+.grant-location-container{
+    display: none;
+}
+
+
+.grant-location-container.active{
+    display: flex;
+
+}
+
+
+.grant-location-container img{
+   margin-bottom: 2rem;
+}
+
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+
+.grant-location-container p:last-of-type{
+    font-size: 0.90rem;
+    font-weight: 500;
+    margin-top: 1.85rem;
+    margin-bottom: 1.65rem;
+}
+
+
+.loading-container{
+    display: none;
+}
+
+
+.loading-container.active{
+    display: flex;
+}
+
+
+.loading-container p{
+    text-transform: uppercase;
+}
+
+
+.user-info-container{
+     display: none; 
+} 
+
+
+.user-info-container.active{
+    display: flex;
+}
+
+
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+
+.user-info-container img{
+    height: 90px;
+    width: 90px;
+}
+
+
+.name p{
+    font-size: 1.5rem;
+}
+
+
+.name img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.user-info-container p[data-temp]{
+    font-size: 2.45rem;
+    font-weight: 700;
+}
+
+
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+   
+}
+
+
+.parameter{
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(201, 197, 197, 0.509);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+   align-items: center;
+}
+
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.parameter p:first-of-type{                  /*  p:first-of-type ka matlab h ki parameter wale div mein jo bhi pehla paragraph tag h woh*/
+    font-size:1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.parameter p:last-of-type{                      /*  p:last-of-type ka matlab h ki parameter wale div mein jo bhi last paragraph tag h woh*/
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+
+
+.form-container{
+    display: none;
+    /* display: flex; */
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+
+
+.form-container.active{
+    display: flex;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+
+.form-container input{
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgb(136, 187, 203);
+    border-radius: 10px;
+}
+
+
+.form-container input::placeholder{
+    color: black;
+}
+
+
+.form-container input::focus{                    /* to create outline ki hum jab bhi click kare placeholder pe toh outline aa jaaye*/
+    outline: 3px solid white;
+}
+
+
+hr{
+    color: #D8E2EF;
+}
+.footer{
+    background-image: linear-gradient(156deg,#1e4c81 0%,#3f72af 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
